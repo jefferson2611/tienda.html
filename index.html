@@ -1,124 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Coopebacuc</title>
-    <link rel=" stylesheet " href="style.css ">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+    body {
+        background-color: rgb(241, 13, 104);
+    }
+    
+    .contenedopadre {
+        border: 1px solid rgb(19, 19, 23);
+    }
+    
+    .contenedorEncabezado {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid rgb(237, 12, 125);
+        background-color: rgb(249, 11, 138);
+        color: white;
+    }
+    
+    .contenedor_titulo_Encabezado h1 {
+        margin: 0;
+        background-color: rgb(188, 8, 104);
+        color: rgb(16, 13, 13);
+        border-bottom: 1px solid rgb(188, 8, 104);
+        padding: 1px;
+        border-radius: 30px 15px 30px 15px;
+        width: 1000px;
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .menu_Encabezado {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .menu_Encabezado button {
+        padding: 10px;
+        border: 1px solid rgb(236, 213, 10);
+        border-radius: 60px;
+        background-color: rgb(236, 213, 10);
+        color: rgb(28, 23, 23);
+        cursor: pointer;
+    }
+    
+    .bt_Encabezado:hover {
+        box-shadow: 0 0 30px 15px white;
+        transform: rotate(15deg);
+        /* Añadir rotación(iluminacion de botones)*/
+    }
+    
+    .contenedorlogo img {
+        height: 200px;
+        width: 200px;
+    }
+    
+    .contenedor_menu_Pagina {
+        display: flex;
+        margin-top: 20px;
+    }
+    
+    .contenedor_columna_1 {
+        flex: 1;
+        padding: 10px;
+        background-color: rgb(188, 8, 104);
+        border: 1px solid rgb(188, 8, 104);
+        width: 200px;
+    }
+    
+    .Contenedor_Menulink {
+        cursor: pointer;
+        background-color: rgb(236, 213, 10);
+        border-radius: 30px;
+        width: 200px;
+    }
+    
+    .Contenedor_Menulink ul {
+        list-style: none;
+        padding: 0
+    }
+    
+    .Contenedor_Menulink a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        background-color: rgb(236, 213, 10);
+        border: 1px solid rgb(188, 8, 104);
+    }
+    
+    .link {
+        border: 1px sold rgb(236, 12, 139);
+        border-radius: 30px 15px 30px 15px;
+        width: 200px;
+        background-color: rgb(236, 12, 139);
+        text-align: center;
+    }
+    
+    .contenedorcolumna2 {
+        flex: 1;
+        padding: 10px;
+        background-color: rgb(236, 12, 139);
+        border: 1px solid rgb(236, 213, 10);
+        width: 1000px;
+    }
+    
+    .ContenedorCategorias button {
+        padding: 10px;
+        width: 18%;
+        border: 1px solid rgb(236, 213, 10);
+        border-radius: 30px 15px 30px 15px;
+        background-color: yellow;
+        color: black;
+        cursor: pointer;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .Titulocatalogo {
+        width: 800px;
+        height: 40px;
+        background-color: rgb(188, 8, 104);
+        ;
+        border: 1px sold rgb(188, 8, 104);
+        color: black;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .bt_Categarias {
+        border: 1px sold blue;
+        background-color: darkblue;
+        width: 20%;
+        padding: 1px;
+        margin-bottom: 1px;
+        border-radius: 30px 15px 30px 15px;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .contenedor_kids {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        width: 1100px;
+    }
+    
+    .img_Catalogo {
+        width: 200px;
+        height: 200px;
+        align-items: center;
+    }
+    
+    .contenedor_kids {
+        border: 1px sold yellow;
+    }
+    
+    .bt_Categorias:hover {
+        box-shadow: 0 0 30px 15px rgba(247, 247, 240, 0.836);
+        transform: rotate(10deg);
+    }
+    
+    .Detalles {
+        color: black;
+        text-align: center;
+        padding-bottom: 15px;
+        background-color: yellow;
+        border-radius: 30px 15px 30px 15px;
+        padding-top: 15px;
+        height: 22px;
+        width: 200px;
+        font-size: 20px;
+    }
+    
+    .texto {
+        color: black;
+        background-color: rgb(188, 8, 104);
+        border-radius: 30px 15px 30px 15px;
+        padding-top: 15px;
+        height: 200px;
+        width: 200px;
+    }
+    
+    .contenedor_columna_1 {
+        width: 200px;
+        /* Ajusta el ancho de la columna según sea necesario */
+    }
+    
+    .contenedor_Menu_Video iframe,
+    .contenedor_Menu_Video video {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(188, 8, 104);
+        color: black;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    .footer button {
+        background-color: yellow;
+        border-radius: 60px;
+        color: black;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    .footer button:hover {
+        box-shadow: 0 0 30px 15px white;
+        transform: rotate(15deg);
+    }
+    
+    .cpyright {
+        color: black;
+        font-size: 13px;
+        margin: 20px;
+    }
+</style>
 
 <body>
-    <table border="1px solid ">
-        <tr>
-            <td colspan="2 ">
-                <table border="1px sold " , align=" ">
-                    <tr align="center ">
-                        <td>
-                            <img src="logo.jpg " style: width="500 " height="200 ">
-                        </td>
-                        <td>
-                            <img src="nombre.jpg " style: width="900 " height="200 " "></td>
-            </td>
-
-            </tr>
-            </table>
-            </td>
-
-        </tr>
-        <tr>
-            <td>
-                <table border="=1px solid " , align="center ">
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    <a href="https://www.youtube.com/watch?v=_qjel98Rygohttps://www.youtube.com/watch?v=_qjel98Rygo " title="ver detalle " target="_blank ">HIMNO</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    <a href="https://www.webcolegios.com/sanjose/ " title="ver detalle " target="_blank ">webcolegios</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    <a href="https://www.colegiosanjosedeperalta.edu.co/ " title="ver detalle " target="_blank ">INFORMACION</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-
-                            <ul>
-                                <li>
-                                    <a href="https://www.google.com/search?q=INFORMACION+COLEGIO+SAN+JOSE+DE+PERALTA&rlz=1C1CHZN_esCO958CO958&oq=INFORMACION+COLEGIO+SAN+JOSE+DE+PERALTA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMggIAhAAGBYYHjIICAMQABgWGB4yCggEEAAYgAQYogQyCggFEAAYgAQYogTSAQkyNjczNmowajmoAgiwAgE&sourceid=chrome&ie=UTF-8&lqi=CidJTkZPUk1BQ0lPTiBDT0xFR0lPIFNBTiBKT1NFIERFIFBFUkFMVEFI8qj3yeWAgIAIWjEQABABEAIQAxAEGAAYARgCGAMYBCIbY29sZWdpbyBzYW4gam9zZSBkZSBwZXJhbHRhkgEGc2Nob29sqgFREAEqCyIHY29sZWdpbygOMh8QASIbwCCsZy4YYk5-wPGORx-G5CfMix5TQH6d3WhqMh8QAiIbY29sZWdpbyBzYW4gam9zZSBkZSBwZXJhbHRh#rlimm=9957786736262328904 "
-                                        title="ver detalle " target="_blank " |>MAP</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    <a href="https://www.colegiosanjosedeperalta.edu.co/galeriashttps://www.colegiosanjosedeperalta.edu.co/galerias " title="ver detalle " target="_blank ">GALERIA</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td>
-                <table border="=1px solid ">
-                    <tr>
-                        <td colspan="2 " , height="60 " , align=" center ">
-                            <div class="titulo1 ">
-                                <h1>MISION</h1>
-                            </div>
-                            <p>El colegio Cooperativo San José de Peralta contribuye a la formación integral de los niños, niñas y jóvenes basada en los valores cristianos; favoreciendo el crecimiento de la persona en todas sus dimensiones, el fortalecimiento
-                                en las áreas del saber, la implementación del bilingüismo escolar respondiendo así a las nuevas exigencias del mundo moderno. </p>
-                            <div class="titulo2 ">
-                                <h1>VISION</h1>
-                            </div>
-                            <p>El colegio Cooperativo San José de Peralta se proyecta para el 2025 como líder a nivel local en la formación en calidad y caridad mediante la implementación del Ideario Educativo de Calasanz y la formación de personas comprometidas
-                                con el cambio social, responderemos a los retos educativos y sociales, asumiendo su rol de instancia crítica, a la luz del Evangelio, siendo una escuela que trabaja por la paz, la justicia y la solidaridad, que opta por
-                                el respeto y cuidado del medio ambiente. Estableceremos alianzas de diversa índole buscando que todo sea para mayor gloria de Dios y utilidad del prójimo.</p>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="60 " , align=" center "><img id="logo " src="studens1.jpg " width="300 " height="300 "></td>
-                        <td height="60 " , align=" center "><img src="studens2.jpg " width="300 " height="300 "></td>
-                    </tr>
-
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2 ">
-                <table border="1px solid " , align=" center ">
-                    <td width="100px " , align=" center ">pie de pagina</td>
-                    <td>
-                        <a href="https://www.facebook.com/sanjosedeperalta/?locale=es_LA " title="ver detalle " target="_blank ">
-                            <img src="facebook.jpg " width=" 40px ">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="https://www.instagram.com/p/Bl004IXghIQ/?hl=es " title="ver detalle " target="_blank ">
-                            <img src="instagram.jpg " style: width="40 ">
-                    </td>
-                </table>
-            </td>
-        </tr>
-    </table>
+    <div class="contenedorEncabezado">
+        <div class="Encabezado_columna1">
+            <div class="contenedor_titulo_Encabezado">
+                <h1>STHELU KIDS</h1>
+            </div>
+            <section class="menu_Encabezado">
+                <button class="bt_Encabezado">Address</button>
+                <button class="bt_Encabezado">Products</button>
+                <button class="bt_Encabezado">About</button>
+                <button class="bt_Encabezado">Contact</button>
+            </section>
+        </div>
+        <div class="Encabezado_columna2">
+            <div class="contenedorlogo">
+                <img class="imagenLogo" src="logo.jpg.jpg" alt="Logo">
+            </div>
+        </div>
+    </div>
+    <div class="contenedor_menu_Pagina">
+        <div class="contenedor_columna_1">
+            <section class="contenedor_Menu_Video ">
+                <div class="contenedor_video_1 ">
+                    <iframe width="250 " height="100 " src="https://www.youtube.com/embed/LAZqFqfGf-M?si=mU1WG2fT6Vejo1rG " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+            web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+                </div>
+                <div class="contenedorvideo2 ">
+                    <iframe width="250 " height=" 100 " src="https://www.youtube.com/embed/mKVAgtsoQjA?si=HZPGrt5fFOafNjBF " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+            picture-in-picture; web-share " referrerpolicy="strict-origin-when-cross-origin " allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="Contenedor_Menulink ">
+                <ul class="Contenedor_link ">
+                    <li><a class="link " href=" ">Apps</a></li>
+                    <li><a class="link " href=" ">Games</a></li>
+                    <li><a class="link " href=" ">Movies</a></li>
+                    <li><a class="link " href=" ">Books</a></li>
+                    <li><a class="link " href=" ">Newspapers</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="contenedorcolumna2 ">
+            <section class=" ContenedorCategorias ">
+                <button class="bt_Categorias ">BABY</button>
+                <button class="bt_Categorias ">GIRL</button>
+                <button class="bt_Categorias ">BOY</button>
+                <button class="bt_Categorias ">WOMAN</button>
+                <button class="bt_Categorias ">MAN</button>
+            </section>
+            <section class="contenedortituloCatalogo ">
+                <h1 class="Titulocatalogo ">CATALOGO</h1>
+            </section>
+            <div style="width:100%; overflow: hidden "></div>
+            <section class="contenedor_Imagen " style="width:33%; float: left ">
+                <section class="contenedor_Kids ">
+                    <section>
+                        <p class="Detalles ">MAMELUCOS</p>
+                        <img class="img_Catalogo " src="mamelucos.jpeg " alt="Mamelucos ">
+                        <section class="contenedor_Detalles ">
+                            <p class="texto ">Detalles<br><br>Estilo de cuello: Redondo<br> Manga: Corta
+                                <br>Diseño: Impreso
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="contenedor_Imagen " style="width:33%; float: left ">
+                <section class="contenedor_Kids ">
+                    <section>
+                        <p class="Detalles ">VESTIDOS BABY</p>
+                        <img class="img_Catalogo " src="vestido baby.jpeg " alt="vestidosbaby ">
+                        <section class="contenedor_Detalles ">
+                            <p class="texto ">Detalles<br><br>Jóvenes Niñas Bebé Arco De Cereza anak <br>Vestido De Verano Con Flor
+                                <br>De Limón Sombrero De Algodón <br>halter Moda Princesa
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="contenedor_Imagen " style="width:33%; float: left ">
+                <section class="contenedor_Kids ">
+                    <section>
+                        <p class="Detalles ">OBEROL GIRL</p>
+                        <img class="img_Catalogo " src="oberol girl.jpeg " alt="oberol girl ">
+                        <section class="contenedor_Detalles ">
+                            <p class="texto ">Detalles<br><br>Hermoso oberol en jeans<br>para niñas con lindos bordados
+                                <br>de minie mouse <br>de la talla 2 a la 8
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="contenedor_Imagen " style="width:33%; float: left ">
+                <section class="contenedor_Kids ">
+                    <section>
+                        <p class="Detalles ">DEPORTIVO GIRL</p>
+                        <img class="img_Catalogo " src="deportivoniña.jpeg " alt="deportivoniña ">
+                        <section class="contenedor_Detalles ">
+                            <p class="texto ">Detalles<br><br>Conjunto deportivo para niñas<br>moschino buso cuello redondo
+                                <br>y jogger en algodor burda<br> Moda Princesa
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="contenedor_Imagen " style="width:33%; float: left ">
+                <section class="contenedor_Kids ">
+                    <section>
+                        <p class="Detalles ">DEPORTIVO BOY</p>
+                        <img class="img_Catalogo " src="deportivoniño.jpeg " alt="deportivoniño ">
+                        <section class="contenedor_Detalles ">
+                            <p class="texto ">Detalles<br><br>Conjunto deportivo para niños<br>camisa cuello redomdo algodon
+                                <br>pantaloneta burda algodon<br> Moda deportiva.
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="contenedor_Imagen " style="width:33%; float: left ">
+                <section class="contenedor_Kids ">
+                    <section>
+                        <p class="Detalles ">DEPORTIVO DAMA</p>
+                        <img class="img_Catalogo " src="deportivodama.jpeg " alt="deportivodama ">
+                        <section class="contenedor_Detalles ">
+                            <p class="texto ">Detalles<br><br>Conjunto deportivo para damas<br>camisa en algodon cuello redomdo
+                                <br>pantaloneta enalgodon<br> Moda deportiva marca NIKE.
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </div>
+    <div class="menuPiePagina "></div>
+    <footer class="footer">
+        <div class="footer-text">
+            <p class="cpyright">&copy Copyright 2024 Constructora-Inbobiliaria Leal</p>
+        </div>
+        <div class="footer-botons">
+            <button>Home</button>
+            <button>Apps</button>
+            <button>Games</button>
+            <button>Movies</button>
+            <button>Books</button>
+        </div>
+    </footer>
 </body>
 
 </html>
